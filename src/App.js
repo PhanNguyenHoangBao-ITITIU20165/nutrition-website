@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Header from './components/Header';
+import Header from './components/Headers';
 import Home from './pages/Home';
 import Recommendation from './components/Recommendation';
-import ProgressTracker from './components/ProgressTracker';
+import ProgressTracker from './components/progressTracker';
 
 function App() {
   const [planData, setPlanData] = useState(null);

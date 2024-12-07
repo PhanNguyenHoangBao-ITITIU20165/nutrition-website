@@ -1,5 +1,5 @@
 import React from 'react';
-import PlanForm from '../components/PlanForm';
+import PlanForm from '../components/planForm';
 
 const Home = ({ onSubmitPlan }) => {
   return (
