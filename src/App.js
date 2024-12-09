@@ -1,30 +1,15 @@
-import React, { useState } from 'react';
-import Header from './components/Headers';
-import Home from './pages/Home';
-import Recommendation from './components/Recommendation';
-import ProgressTracker from './components/progressTracker';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Home/Home';
+import Login from './Login/Login';
 
-function App() {
-  const [planData, setPlanData] = useState(null);
-  const [view, setView] = useState('home');
-
-  const handlePlanSubmission = (data) => {
-    setPlanData(data);
-    setView('recommendation');
-  };
-
+const App = () => {
   return (
-    <div className="app-container">
-      <Header onNav={(destination) => setView(destination)} />
-      {view === 'home' && <Home onSubmitPlan={handlePlanSubmission} />}
-      {view === 'recommendation' && planData && (
-        <Recommendation planData={planData} />
-      )}
-      {view === 'progress' && (
-        <ProgressTracker planData={planData} />
-      )}
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* CSS Variables for global theming */
+:root {
+  --primary-color: #ff5a5f;
+  --text-color: #333;
+  --background-color: #ffffff;
+  --font-family: 'Inter', sans-serif;
+}
+
+/* Reset margins and paddings, box-sizing to border-box for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a nice global font and background */
+html, body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+/* Anchor tags without underlines by default */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images set to block and max-width 100% for responsive scaling */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* You can add more global utility classes or styles here */
+
+/* Example utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
